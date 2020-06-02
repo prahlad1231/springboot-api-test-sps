@@ -1,12 +1,13 @@
 package com.itahari.sms.iic.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "user")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String username;
     private String password;
     private boolean isEnabled;
